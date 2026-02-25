@@ -37,3 +37,8 @@ cd backend
 ./mvnw clean install
 ./mvnw spring-boot:run
 
+## ai-chat-frontend
+cd frontend
+npm install
+ng serve
+
