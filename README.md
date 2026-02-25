@@ -18,7 +18,7 @@ Un **chatbot intelligent full-stack** combinant **Spring Boot backend** et **Ang
 
 ## 🚀 Installation
 
-### Backend
+## Backend
 
 ```bash
 cd backend
