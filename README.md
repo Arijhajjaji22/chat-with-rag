@@ -16,17 +16,6 @@ Un **chatbot intelligent full-stack** combinant **Spring Boot backend** et **Ang
 
 ---
 
-## 🚀 Installation
-
-## Backend
-
-```bash
-cd backend
-./mvnw clean install
-./mvnw spring-boot:run
-
----
-
 ## 💡 Usage
 
 Poser une question au chatbot
@@ -38,4 +27,13 @@ Le bot peut :
 2.Générer des réponses via Gemini 
 
 3.Sauvegarder ou supprimer l’historique des conversations
+
+## 🚀 Installation
+
+## Backend
+
+```bash
+cd backend
+./mvnw clean install
+./mvnw spring-boot:run
 
