@@ -33,12 +33,13 @@ Le bot peut :
 ## Backend
 
 ```bash
-cd backend
+
 ./mvnw clean install
 ./mvnw spring-boot:run
 
-## ai-chat-frontend
-cd frontend
+## 𝐅𝐫𝐨𝐧𝐭𝐞𝐧𝐝
+```bash
+cd ai-chat-frontend
 npm install
 ng serve
 
