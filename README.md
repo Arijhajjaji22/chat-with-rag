@@ -25,7 +25,9 @@ cd backend
 ./mvnw clean install
 ./mvnw spring-boot:run
 
-💡 Usage
+---
+
+## 💡 Usage
 
 Poser une question au chatbot
 
