@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: AI-with-spring
+  ai:
+    openai:
+      api-key: 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
+      base-url: https://openrouter.ai/api
+      chat:
+        options:
+          model: google/gemma-3-4b-it:free
+
+server:
+  port: 9095

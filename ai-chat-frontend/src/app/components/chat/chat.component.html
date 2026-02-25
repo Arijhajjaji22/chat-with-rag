@@ -1,0 +1,56 @@
+<div class="chat-container">
+
+  <!-- Header -->
+  <div class="chat-header">
+    <h2>🤖 AI Chat </h2>
+    <div class="controls">
+      <label class="toggle">
+        <input type="checkbox" [(ngModel)]="useRag">
+        <span>Mode RAG (PDF)</span>
+      </label>
+      <button class="btn-clear" (click)="clearHistory()">🗑 Effacer</button>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  <div class="messages-container">
+    <div *ngIf="messages.length === 0" class="empty-state">
+      Pose une question pour commencer !
+    </div>
+
+    <div *ngFor="let msg of messages" 
+         class="message" 
+         [ngClass]="msg.role">
+      <div class="avatar">{{ msg.role === 'user' ? '👤' : '🤖' }}</div>
+      <div class="bubble">
+     <div [innerHTML]="parseMarkdown(msg.content)"></div>
+        <span class="time">{{ msg.timestamp | date:'HH:mm' }}</span>
+      </div>
+    </div>
+
+    <!-- Indicateur de chargement -->
+    <div *ngIf="isLoading" class="message assistant">
+      <div class="avatar">🤖</div>
+      <div class="bubble loading">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input -->
+  <div class="chat-input">
+    <textarea 
+      [(ngModel)]="question"
+      (keydown)="onEnter($event)"
+      placeholder="Pose ta question... (Enter pour envoyer)"
+      rows="2">
+    </textarea>
+    <button (click)="sendMessage()" [disabled]="isLoading || !question.trim()">
+      Envoyer ➤
+    </button>
+     <button *ngIf="isLoading" (click)="stopChat()" class="btn-cancel">
+    ✖ Stop
+  </button>
+  </div>
+
+</div>
