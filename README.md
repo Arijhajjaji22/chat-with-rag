@@ -28,18 +28,5 @@ Le bot peut :
 
 3.Sauvegarder ou supprimer l’historique des conversations
 
-## 🚀 Installation
 
-## Backend
-
-```bash
-
-./mvnw clean install
-./mvnw spring-boot:run
-
-## 𝐅𝐫𝐨𝐧𝐭𝐞𝐧𝐝
-```bash
-cd ai-chat-frontend
-npm install
-ng serve
 
